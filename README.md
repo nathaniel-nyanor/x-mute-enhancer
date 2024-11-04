@@ -9,7 +9,7 @@ Follow these steps to install Mute Enhancer in your Chrome browser:
 1. **Download the Extension Files**
     - Clone or download the repository to your local machine.
     ```sh
-    [git clone https://github.com/nathaniel-nyanor/x-mute-enhancer.git](https://github.com/nathaniel-nyanor/x-mute-enhancer.git)
+      git clone https://github.com/nathaniel-nyanor/x-mute-enhancer.git
     ```
 
 2. **Open Chrome Extensions Page**
