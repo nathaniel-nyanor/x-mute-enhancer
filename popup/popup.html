@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>X-Muter</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>X-Muter</h1>
+
+  <div class="tab-container">
+    <div class="tabs">
+      <button class="tab active" data-tab="keywords">Keywords</button>
+      <button class="tab" data-tab="categories">Categories</button>
+      <button class="tab" data-tab="usernames">Usernames</button>
+      <button class="tab" data-tab="stats">Stats</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </div>
+  </div>
+
+  <div class="tab-content-container">
+    <div id="keywords" class="tab-content active">
+      <h2>Keywords</h2>
+      <input type="text" id="keywordInput" placeholder="Keyword">
+      <select id="categorySelect"></select>
+      <input type="checkbox" id="regexToggle"> Regex
+      <button id="addKeyword">Add Keyword</button>
+      <div id="keywordList"></div>
+    </div>
+
+    <div id="categories" class="tab-content">
+      <h2>Categories</h2>
+      <input type="text" id="categoryInput" placeholder="Category Name">
+      <input type="color" id="categoryColor" value="#1DA1F2">
+      <button id="addCategory">Add Category</button>
+      <div id="categoryList"></div>
+    </div>
+
+    <div id="usernames" class="tab-content">
+      <h2>Muted Usernames</h2>
+      <input type="text" id="usernameInput" placeholder="@username">
+      <button id="addUsername">Add Username</button>
+      <div id="usernameList"></div>
+    </div>
+
+    <div id="stats" class="tab-content">
+      <h2>Mute Statistics</h2>
+      <div id="statsData"></div>
+    </div>
+
+    <div id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <input type="checkbox" id="autoHideToggle"> Auto-hide muted tweets
+      <br>
+      <button id="exportData">Export Settings</button>
+      <button id="importData">Import Settings</button>
+      <input type="file" id="importFile" style="display:none;">
+    </div>
+  </div>
+
+
+  <script src="popup.js"></script>
+</body>
+</html>

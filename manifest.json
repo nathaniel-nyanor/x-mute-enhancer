@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "X Keyword Muter",
+  "version": "1.1",
+  "description": "Automatically mutes and hides posts containing specific keywords on X",
+  "permissions": [
+    "storage",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://x.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": ["popup.js", "content.js"]
+    }
+  ]
+}

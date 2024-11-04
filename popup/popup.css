@@ -1,0 +1,240 @@
+:root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    padding: 0.75rem;
+    width: 400px;
+    transition: background-color 0.3s ease;
+  }
+  
+  h1, h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: hsl(var(--foreground));
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .tab-container {
+    margin-bottom: 0.75rem;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    background-color: hsl(var(--card));
+    border-radius: var(--radius);
+    padding: 0.25rem;
+    box-shadow: none;
+  }
+  
+  .tabs button {
+    flex: 0 1 auto;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: calc(var(--radius) - 0.25rem);
+    background-color: transparent;
+    color: hsl(var(--muted-foreground));
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  
+  .tabs .active {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  
+  .tab-content-container {
+    background-color: hsl(var(--card));
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    box-shadow: none;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  input[type="text"], select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid hsl(var(--input));
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-size: 0.875rem;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  
+  button {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: hsl(var(--primary) / 0.9);
+  }
+  
+  .keyword-item, .category-item, .username-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    border-radius: calc(var(--radius) - 0.25rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .remove-btn {
+    background-color: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .remove-btn:hover {
+    background-color: hsl(var(--destructive) / 0.9);
+  }
+  
+  .regex-indicator {
+    font-size: 0.75rem;
+    color: hsl(var(--muted-foreground));
+    margin-left: 0.25rem;
+  }
+  
+  .category-tag {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: calc(var(--radius) - 0.375rem);
+    color: hsl(var(--primary-foreground));
+    background-color: hsl(var(--primary));
+    margin-left: 0.25rem;
+  }
+  
+  #statsData p {
+    margin: 0.25rem 0;
+    color: hsl(var(--muted-foreground));
+  }
+  
+  #autoHideToggle {
+    margin-right: 0.5rem;
+  }
+  
+  #exportData, #importData {
+    margin-top: 0.75rem;
+    margin-right: 0.5rem;
+  }
+  
+  #importFile {
+    display: none;
+  }
+  
+  /* Custom checkbox styles */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid hsl(var(--muted-foreground));
+    border-radius: calc(var(--radius) - 0.375rem);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    color: hsl(var(--primary-foreground));
+    font-size: 0.875rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Dark mode toggle */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: hsl(var(--muted-foreground));
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  .dark-mode-toggle:hover {
+    color: hsl(var(--foreground));
+  }
